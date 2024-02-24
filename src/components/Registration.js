@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { postRegistration } from "../apis/UserApi";
 
 function Registration() {
   const [currentValue, setValue] = useState({
@@ -58,8 +59,7 @@ function Registration() {
 
     // If there are no errors, proceed with form submission
     if (Object.keys(validationErrors).length === 0) {
-      console.log("Form submitted successfully:", currentValue);
-      // Further form submission logic
+      postRegistration(currentValue);
     }
   }
 
