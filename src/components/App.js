@@ -1,11 +1,11 @@
-import Registration from "../components/Registration";
-
 import "../styles/App.css";
+
+import LogIn from "./LogIn";
 
 function App() {
   return (
     <div>
-      <Registration />
+      <LogIn />
     </div>
   );
 }
