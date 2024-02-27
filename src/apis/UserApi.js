@@ -30,4 +30,33 @@ const postRegistration = (newUser) => {
     });
 };
 
-export { postRegistration };
+const postLogIn = (userLogIn) => {
+  const postOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      password: `${userLogIn.password}`,
+      username: `${userLogIn.username}`
+    })
+  };
+
+  fetch("http://localhost:8080/user/login", postOptions)
+    .then((response) => {
+      if (response.status === 401) {
+        alert("Invalid Username or Password.");
+      } else if (response.ok) {
+        alert("Login successful.");
+      } else {
+        alert("Registration failed. Please try again later.");
+      }
+      console.log(response);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again later.");
+    });
+};
+
+export { postRegistration, postLogIn };

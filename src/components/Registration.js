@@ -127,6 +127,7 @@ function Registration() {
           required
         />
         <br />
+
         <label>Password</label>
         <br />
         <input
