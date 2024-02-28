@@ -155,6 +155,9 @@ function Registration() {
         {errors.retypepassword && <p>{errors.retypepassword}</p>}
 
         <button type="submit">Submit</button>
+        <p>
+          Already have an account? LogIn <a href="/">here</a>
+        </p>
       </form>
     </div>
   );

@@ -51,7 +51,6 @@ const postLogIn = (userLogIn) => {
       } else {
         alert("Registration failed. Please try again later.");
       }
-      console.log(response);
     })
     .catch((error) => {
       console.error("Error:", error);

@@ -21,7 +21,6 @@ function LogIn() {
 
   function handleSubmit(e) {
     e.preventDefault();
-
     postLogIn(currentValue);
   }
 
@@ -55,6 +54,10 @@ function LogIn() {
         <br />
 
         <button type="submit">Log In</button>
+
+        <p>
+          No account? Register <a href="/registration">here</a>
+        </p>
       </form>
     </div>
   );
