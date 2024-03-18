@@ -156,7 +156,7 @@ function Registration() {
 
         <button type="submit">Submit</button>
         <p>
-          Already have an account? LogIn <a href="/">here</a>
+          Already have an account? LogIn <a href="/login">here</a>
         </p>
       </form>
     </div>

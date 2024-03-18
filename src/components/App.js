@@ -1,11 +1,12 @@
 import "../styles/App.css";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
+
+import Home from "./Home";
 import LogIn from "./LogIn";
 import Registration from "./Registration";
 import Dashboard from "./Dashboard";
-import { useState } from "react";
-import Home from "./Home";
 
 function App() {
   return (
