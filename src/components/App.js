@@ -11,7 +11,7 @@ import Dashboard from "./Dashboard";
 function App() {
   return (
     <Router>
-      <ul>
+      <ul className="navigationBar">
         <li>
           <Link to="/">Home</Link>
         </li>
