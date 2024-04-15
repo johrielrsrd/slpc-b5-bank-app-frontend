@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { postLogIn } from "../apis/UserApi";
+import { useNavigate } from "react-router-dom";
 
 function LogIn() {
+  const navigate = useNavigate();
+
   const [currentValue, setValue] = useState({
     username: "",
     password: ""
@@ -21,7 +24,11 @@ function LogIn() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    postLogIn(currentValue);
+    postLogIn(currentValue).then((result) => {
+      if (result) {
+        navigate("/dashboard");
+      }
+    });
   }
 
   return (

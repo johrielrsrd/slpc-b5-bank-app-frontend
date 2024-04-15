@@ -30,7 +30,7 @@ const postRegistration = (newUser) => {
     });
 };
 
-const postLogIn = (userLogIn) => {
+const postLogIn = async (userLogIn) => {
   const postOptions = {
     method: "POST",
     headers: {
@@ -42,12 +42,12 @@ const postLogIn = (userLogIn) => {
     })
   };
 
-  fetch("http://localhost:8080/user/login", postOptions)
+  return await fetch("http://localhost:8080/user/login", postOptions)
     .then((response) => {
       if (response.status === 401) {
         alert("Invalid Username or Password.");
       } else if (response.ok) {
-        alert("Login successful.");
+        return true;
       } else {
         alert("Registration failed. Please try again later.");
       }

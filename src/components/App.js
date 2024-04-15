@@ -1,7 +1,6 @@
 import "../styles/App.css";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { useState } from "react";
 
 import Home from "./Home";
 import LogIn from "./LogIn";
@@ -27,6 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   );
