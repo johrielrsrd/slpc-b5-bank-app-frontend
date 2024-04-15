@@ -1,6 +1,6 @@
 import "../styles/App.css";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 import Home from "./Home";
 import LogIn from "./LogIn";
@@ -9,7 +9,7 @@ import Dashboard from "./Dashboard";
 
 function App() {
   return (
-    <Router>
+    <div>
       <ul className="navigationBar">
         <li>
           <Link to="/">Home</Link>
@@ -28,7 +28,7 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-    </Router>
+    </div>
   );
 }
 

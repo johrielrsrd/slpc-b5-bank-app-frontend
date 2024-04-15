@@ -44,6 +44,7 @@ const postLogIn = async (userLogIn) => {
 
   return await fetch("http://localhost:8080/user/login", postOptions)
     .then((response) => {
+      console.log(response);
       if (response.status === 401) {
         alert("Invalid Username or Password.");
       } else if (response.ok) {
